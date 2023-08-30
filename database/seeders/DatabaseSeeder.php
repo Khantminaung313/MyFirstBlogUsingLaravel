@@ -28,7 +28,7 @@ class DatabaseSeeder extends Seeder
             'email' => 'zoro@gmail.com'
         ]);
 
-        User::factory()->create([
+        $khantminaung = User::factory()->create([
             'name' => 'Khantminaung',
             'username' => 'khantminaung',
             'email' => 'khantminaung@gmail.com',
@@ -54,6 +54,11 @@ class DatabaseSeeder extends Seeder
         Blog::factory(2)->create([
             'category_id' => $backend->id,
             'user_id' => $dean->id
+        ]);
+
+        Blog::factory(4)->create([
+            'category_id' => $backend->id,
+            'user_id' => $khantminaung->id
         ]);
     }
 }
